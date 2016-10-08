@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+    int xp,yp,xc,yc;
+    
+    while(scanf("%d %d %d %d",&xp,&yp,&xc,&yc)!=EOF){
+                   
+                   if(xp == 0 && yp == 0 && xc == 0 && yc == 0) break;
+                   
+                   if(xp == xc && yp == yc) printf("0\n");
+                   else if((xc-xp) == -(yc-yp) || -(xc-xp) == -(yc-yp) || -(xc-xp) == (yc-yp) || (xc-xp) == (yc-yp)) printf("1\n");
+                   else if(xp == xc || yp == yc) printf("1\n");
+                   else printf("2\n");
+    }
+    return 0;
+}

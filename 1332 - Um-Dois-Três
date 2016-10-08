@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+	int t, i, aux = 0;
+	char alf[5], s0, s1, s2;
+	scanf("%d", &t);
+	
+	while(t--){
+		scanf("%s", alf);
+		if (strlen(alf) == 5){
+			aux = 3;
+		}else{
+			for (i = 0; i < 6; i++){
+				if (alf[i] == '\0'){
+				break;
+				}
+				
+				s0 = alf[0];
+				s1 = alf[1];
+				s2 = alf[2];
+				
+			if ((s0 == 'o' && s1 == 'n') || (s0 == 'o' &  s2 == 'e') || (s1 == 'n' && s2 == 'e')){
+				aux = 1;
+			}else{
+				aux = 2;
+			}
+			}
+		}
+		printf("%d\n", aux);	
+	}
+	
+	return 0;
+}

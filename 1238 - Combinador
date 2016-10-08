@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+ 
+int main() {
+ 
+    int n, i, j, maior;
+    int tam, tam2;
+    char s1[52], s2[52];
+    int t1, t2;
+    
+    scanf("%d", &n);
+    
+    for (i = 0; i < n ; i++){
+    	scanf("%s %s", &s1, &s2);
+    	tam = strlen( s1 );
+    	tam2 = strlen( s2 );
+    	if ( tam < tam2) {
+    		maior = tam2;
+		}
+    	else{
+    		maior = tam;
+		}
+    	
+    	for (j = 0; j < maior; j++){
+    		if ( j < tam) printf ("%c", s1[j]);
+    		if ( j < tam2) printf ("%c", s2[j]);
+		}
+		printf ("\n");
+	}
+ 
+    return 0;
+}

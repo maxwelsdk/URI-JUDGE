@@ -1,0 +1,24 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+   	int i, j;
+   	int n, des;
+   	char cod[50];
+   	
+   	scanf("%d", &n);
+   	
+   	for ( i = 0; i < n; i++){
+   		scanf("%s", &cod);
+   		scanf("%d", &des);
+   		
+   		for ( j = 0; j < 50; j++){
+   			if ( cod[j] == '\0') break;
+   				if ((cod[j] - des) < 65) printf("%c", (cod[j] - des)+ 26);
+   				else printf("%c", (cod[j] - des));
+	   }
+	   printf("\n");
+	}
+ 
+    return 0;
+}

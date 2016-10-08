@@ -1,0 +1,17 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int i, t;
+    int r1, r2, raio;
+    
+    scanf("%d", &t);
+    for (i = 0; i < t; i++){
+    	scanf("%d %d", &r1, &r2);
+    	raio = r1 + r2;
+	printf("%d\n", raio);    	
+	}
+
+ 
+    return 0;
+}

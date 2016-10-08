@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int j, i, vet[20];
+    
+    for(i = 19; i >= 0; i--){
+    	scanf("%d", &vet[i]);
+	}
+	for(j = 0; j < 20; j++){
+		printf("N[%d] = %d\n", j, vet[j]);
+	}
+ 
+    return 0;
+}

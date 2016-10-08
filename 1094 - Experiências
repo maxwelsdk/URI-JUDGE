@@ -1,0 +1,37 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int coelhos, sapos, ratos, n;
+    int i, cobaia, total;
+	char op;
+    
+    coelhos = sapos = ratos = 0;
+    
+    scanf("%d", &n);
+    
+    for (i = 0; i < n; i++){
+    	scanf("%d %c", &cobaia, &op);
+    	switch (op){
+    		case 'C':
+    			coelhos += cobaia;
+    		break;
+    		case 'S':
+    			sapos += cobaia;
+    		break;
+    		case 'R':
+    			ratos += cobaia;
+    		break;   		    			
+		}
+		total =  coelhos + sapos + ratos;
+	}
+	printf("Total: %d cobaias\n", total);
+	printf("Total de coelhos: %d\n", coelhos);
+	printf("Total de ratos: %d\n", ratos);
+	printf("Total de sapos: %d\n", sapos);
+	printf("Percentual de coelhos: %.2f %%\n", (float)coelhos*100/total);
+	printf("Percentual de ratos: %.2f %%\n", (float)ratos*100/total);
+	printf("Percentual de sapos: %.2f %%\n", (float)sapos*100/total);
+ 
+    return 0;
+}

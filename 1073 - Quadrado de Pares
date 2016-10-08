@@ -1,0 +1,21 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int n, res, v;
+    scanf ("%d", &n);
+    
+    int i, vet[n];
+    
+    for (i = 1; i <= n; i++){
+    	if (i%2==0){
+    		res = i*i;
+    		v = i;
+    		printf("%d^2 = %d\n", v, res);
+		}
+    	
+	}
+    
+     
+    return 0;
+}

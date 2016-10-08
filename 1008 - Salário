@@ -1,0 +1,19 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    float sal, nh, vhr;
+    int nf;
+    
+    scanf ("%d", &nf);
+    scanf ("%f", &nh);
+    scanf ("%f", &vhr);
+    
+    sal = nh * vhr;
+    
+    printf("NUMBER = %d\n", nf);
+    printf("SALARY = U$ %.2f\n", sal);
+	    
+ 
+    return 0;
+}

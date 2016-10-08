@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+	double matriz[12][12];
+	double soma = 0;
+	int i, j;
+	char op[5];
+	
+	scanf ("%s", &op);
+	
+	for ( i = 0; i < 12; i++)
+		for (j = 0; j < 12; j++)
+			scanf ("%lf", &matriz[i][j]);
+			
+	for (i = 7; i <= 11; i++){
+		for (j = (11-i+1); j <= (i-1); j++)
+			soma += matriz[i][j];
+	}
+			
+	if (op [0] == 'M')
+		soma = soma / 30;
+		
+	printf ("%.1lf\n", soma);
+}
